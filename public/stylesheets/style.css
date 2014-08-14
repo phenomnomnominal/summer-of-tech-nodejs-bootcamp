@@ -1,8 +1,183 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo:700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
 
 a {
-  color: #00B7FF;
-}
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  box-sizing: border-box; }
+
+html, body, main, .overlay div, .overlay form {
+  height: 100%;
+  width: 100%; }
+
+html {
+  background: #c8c8c8; }
+
+main, .overlay {
+  min-width: 360px;
+  min-height: 480px; }
+
+input {
+  width: 100%;
+  height: 56px;
+  padding: 0px 10px;
+  font-family: 'Open Sans Condensed';
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.7);
+  outline: none;
+  border: none; }
+
+input[type=submit] {
+  color: white;
+  background: #2ecc71;
+  border: 0;
+  border-bottom: 2px solid #28be68;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #28be68;
+  box-shadow: inset 0 -2px #28be68; }
+  input[type=submit]:active {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-top: 2px; }
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); }
+  .overlay div {
+    display: table; }
+  .overlay form {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .overlay form input {
+      height: 50px;
+      width: 80%;
+      max-width: 480px;
+      font-family: 'Arvo';
+      font-size: 30px;
+      text-align: center; }
+
+#Hi {
+  display: none;
+  width: 100%;
+  height: 36px;
+  padding: 4px 10px;
+  font-family: 'Arvo';
+  font-size: 24px;
+  color: white;
+  background: #2ecc71; }
+
+#ChangeName {
+  display: none;
+  width: 120px;
+  height: 36px;
+  margin-top: -36px;
+  padding: 4px 10px;
+  float: right;
+  font-family: 'Arvo';
+  font-size: 12px;
+  line-height: 28px;
+  color: white;
+  cursor: pointer;
+  background: #2e71cc; }
+
+ul {
+  width: 100%; }
+  ul li {
+    font-family: 'Open Sans Condensed';
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+    background: rgba(100, 100, 255, 0.1); }
+    ul li span {
+      padding: 0 5px; }
+    ul li span.time {
+      color: #2e71cc; }
+    ul li.joined {
+      background: rgba(100, 255, 100, 0.5); }
+    ul li.left {
+      background: rgba(255, 100, 100, 0.5); }

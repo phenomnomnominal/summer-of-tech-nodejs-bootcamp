@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  main
+    div(id="Hi")
+    div(id="ChangeName") Change Name!
+    form(id="ChatForm" action="javascript:void(0);")
+      input(type="text", placeholder=" Enter message here:")
+    ul(id="ChatMessages")
+  div(class="overlay")
+    div
+      form(id="UsernameForm" action="javascript:void(0);")
+        input(type="text", placeholder=" Pick a username!")
+        br
+        input(type="submit" value="Enter chat!")
+
+
+  script(src="http://code.jquery.com/jquery-2.1.1.min.js")
