@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var database = require('./database');
 
 var app = express();
 var server = require('http').Server(app);
@@ -24,6 +25,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
+// get history
+app.get('/history', function (req, res) {
+  database.read(function (data) {
+    res.send(data);
+  });
+});
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

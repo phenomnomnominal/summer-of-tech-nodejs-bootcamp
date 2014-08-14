@@ -1,4 +1,5 @@
 var socketIo = require('socket.io');
+var database = require('../database');
 
 var init = function (server) {
   var io = socketIo(server);
@@ -29,11 +30,13 @@ var init = function (server) {
     });
     
     socket.on('send-message', function (data) {
-      io.sockets.emit('message-recieved', {
+      var message = {
         username: socket.username,
         time: Date.now(),
         message: data
-      });
+      };
+      database.write(message);
+      io.sockets.emit('message-recieved', message);
     });
   });
 
