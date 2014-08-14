@@ -34,7 +34,7 @@ Check you have **Node.js** (v0.10.30) installed:
 Then you need to check out this repository, so pick a sensible place for the
 repo, and then run:
 
-    git clone https://github.com/phenomnomnominal/summer-of-tech-node-bootcamp.git
+    git clone https://github.com/phenomnomnominal/summer-of-tech-nodejs-bootcamp.git
 
 Make sure you're at the right point in the repo:
 
