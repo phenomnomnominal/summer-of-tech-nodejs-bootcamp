@@ -4,9 +4,36 @@ var init = function (server) {
   var io = socketIo(server);
 
   io.on('connection', function (socket) {
-    socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
-      console.log(data);
+    console.log('a socket with id "' + socket.id + '" has connected');
+    
+    socket.on('join-chat', function (data) {
+      socket.username = data;
+      socket.broadcast.emit('user-joined', {
+        username: data,
+        time: Date.now()
+      });
+    });
+    
+    socket.on('disconnect', function () {
+      io.sockets.emit('user-left', {
+        username: socket.username,
+        time: Date.now()
+      });
+    });
+    
+    socket.on('leave-chat', function () {
+      io.sockets.emit('user-left', {
+        username: socket.username,
+        time: Date.now()
+      });
+    });
+    
+    socket.on('send-message', function (data) {
+      io.sockets.emit('message-recieved', {
+        username: socket.username,
+        time: Date.now(),
+        message: data
+      });
     });
   });
 
